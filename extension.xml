@@ -15,7 +15,7 @@
 		</ruleset>
 	</properties>
 
-	<announcement text="https://github.com/bmos/FG-PFRPG-Item-Durability\nDrain and Permanent Bonuses v1.0.0:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
+	<announcement text="https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses\nDrain and Permanent Bonuses v1.0.0:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
 
 	<base>
 		<!-- Campaign Records -->
