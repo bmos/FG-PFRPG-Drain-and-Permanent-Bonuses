@@ -9,21 +9,21 @@
 	<windowclass name="charsheet_main" merge="join">
 		<sheetdata>
 			<number_charabilityscore name="strength" source="abilities.strength.score">
-				<anchored to="abilityframe" position="insidetopleft" offset="127,26" width="25" />
+				<anchored to="abilityframe" position="insidetopleft" offset="91,26" width="25" />
 				<description textres="char_tooltip_str" />
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="strength_label">
-				<anchored to="strength" offset="-8,0"/>
+				<anchored to="strength" offset="-44,0"/>
 				<static textres="strength" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="strengthbase" source="abilities.strength.base">
-				<anchored to="strength" position="left" offset="11,0" width="25" />
+				<anchored to="strength" offset="47,0" width="25" />
 				<target>strength</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="strengthdamage" source="abilities.strength.damage">
-				<anchored to="strength" offset="47,0" width="25" />
+				<anchored to="strength" offset="83,0" width="25" />
 				<target>strength</target>
 				<description textres="char_tooltip_strdamage" />
 			</number_charabilitydamage>
@@ -42,18 +42,19 @@
 			<number_charabilityscore name="dexterity" source="abilities.dexterity.score">
 				<anchored to="strength" width="25" />
 				<description textres="char_tooltip_dex" />
+				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="dexterity_label">
-				<anchored to="dexterity" offset="-8,0"/>
+				<anchored to="dexterity" offset="-44,0"/>
 				<static textres="dexterity" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="dexteritybase" source="abilities.dexterity.base">
-				<anchored to="dexterity" position="left" offset="11,0" width="25" />
+				<anchored to="dexterity" offset="47,0" width="25" />
 				<target>dexterity</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="dexteritydamage" source="abilities.dexterity.damage">
-				<anchored to="dexterity" offset="47,0" width="25" />
+				<anchored to="dexterity" offset="83,0" width="25" />
 				<target>dexterity</target>
 				<description textres="char_tooltip_dexdamage" />
 			</number_charabilitydamage>
@@ -72,18 +73,19 @@
 			<number_charabilityscore name="constitution" source="abilities.constitution.score">
 				<anchored to="dexterity" width="25" />
 				<description textres="char_tooltip_con" />
+				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="constitution_label">
-				<anchored to="constitution" offset="-8,0"/>
+				<anchored to="constitution" offset="-44,0"/>
 				<static textres="constitution" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="constitutionbase" source="abilities.constitution.base">
-				<anchored to="constitution" position="left" offset="11,0" width="25" />
+				<anchored to="constitution" offset="47,0" width="25" />
 				<target>constitution</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="constitutiondamage" source="abilities.constitution.damage">
-				<anchored to="constitution" offset="47,0" width="25" />
+				<anchored to="constitution" offset="83,0" width="25" />
 				<target>constitution</target>
 				<description textres="char_tooltip_condamage" />
 			</number_charabilitydamage>
@@ -102,18 +104,19 @@
 			<number_charabilityscore name="intelligence" source="abilities.intelligence.score">
 				<anchored to="constitution" width="25" />
 				<description textres="char_tooltip_int" />
+				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="intelligence_label">
-				<anchored to="intelligence" offset="-8,0"/>
+				<anchored to="intelligence" offset="-44,0"/>
 				<static textres="intelligence" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="intelligencebase" source="abilities.intelligence.base">
-				<anchored to="intelligence" position="left" offset="11,0" width="25" />
+				<anchored to="intelligence" offset="47,0" width="25" />
 				<target>intelligence</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="intelligencedamage" source="abilities.intelligence.damage">
-				<anchored to="intelligence" offset="47,0" width="25" />
+				<anchored to="intelligence" offset="83,0" width="25" />
 				<target>intelligence</target>
 				<description textres="char_tooltip_intdamage" />
 			</number_charabilitydamage>
@@ -132,18 +135,19 @@
 			<number_charabilityscore name="wisdom" source="abilities.wisdom.score">
 				<anchored to="intelligence" width="25" />
 				<description textres="char_tooltip_wis" />
+				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="wisdom_label">
-				<anchored to="wisdom" offset="-8,0"/>
+				<anchored to="wisdom" offset="-44,0"/>
 				<static textres="wisdom" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="wisdombase" source="abilities.wisdom.base">
-				<anchored to="wisdom" position="left" offset="11,0" width="25" />
+				<anchored to="wisdom" offset="47,0" width="25" />
 				<target>wisdom</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="wisdomdamage" source="abilities.wisdom.damage">
-				<anchored to="wisdom" offset="47,0" width="25" />
+				<anchored to="wisdom" offset="83,0" width="25" />
 				<target>wisdom</target>
 				<description textres="char_tooltip_wisdamage" />
 			</number_charabilitydamage>
@@ -162,18 +166,19 @@
 			<number_charabilityscore name="charisma" source="abilities.charisma.score">
 				<anchored to="wisdom" width="25" />
 				<description textres="char_tooltip_cha" />
+				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="charisma_label">
-				<anchored to="charisma" offset="-8,0"/>
+				<anchored to="charisma" offset="-44,0"/>
 				<static textres="charisma" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="charismabase" source="abilities.charisma.base">
-				<anchored to="charisma" position="left" offset="11,0" width="25" />
+				<anchored to="charisma" offset="47,0" width="25" />
 				<target>charisma</target>
 				<script file="campaign/scripts/char_main_abilitybase.lua" />
 			</number_charabilitydamage>
 			<number_charabilitydamage name="charismadamage" source="abilities.charisma.damage">
-				<anchored to="charisma" offset="47,0" width="25" />
+				<anchored to="charisma" offset="83,0" width="25" />
 				<target>charisma</target>
 				<description textres="char_tooltip_chadamage" />
 			</number_charabilitydamage>
