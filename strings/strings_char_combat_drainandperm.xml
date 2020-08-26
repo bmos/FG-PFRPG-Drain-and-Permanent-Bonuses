@@ -7,4 +7,7 @@
 	<string name="char_label_abilitybonus">Mod</string>
 	<string name="char_label_abilityperm">Perm</string>
 	<string name="char_label_abilitybase">Base</string>
+
+	<!-- Titles -->
+	<string name="char_title_permabilchange">Permanent Ability Changes</string>
 </root>

@@ -31,7 +31,12 @@
 				<anchored to="strengthdamage" offset="11,0" width="25" />
 				<target>strength</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="strengthpermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,27" />
+				<target>strength</target>
+			</button_abilperms>
 			<number_charabilitybonus name="strengthbonus" source="abilities.strength.bonus">
 				<anchored to="strength" offset="12,0" width="25" />
 				<target>strength</target>
@@ -62,7 +67,12 @@
 				<anchored to="dexteritydamage" offset="11,0" width="25" />
 				<target>dexterity</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="dexteritypermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,60" />
+				<target>dexterity</target>
+			</button_abilperms>
 			<number_charabilitybonus name="dexteritybonus" source="abilities.dexterity.bonus">
 				<anchored to="dexterity" offset="12,0" width="25" />
 				<target>dexterity</target>
@@ -93,7 +103,12 @@
 				<anchored to="constitutiondamage" offset="11,0" width="25" />
 				<target>constitution</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="constitutionpermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,92" />
+				<target>constitution</target>
+			</button_abilperms>
 			<number_charabilitybonus name="constitutionbonus" source="abilities.constitution.bonus">
 				<anchored to="constitution" offset="12,0" width="25" />
 				<target>constitution</target>
@@ -124,7 +139,12 @@
 				<anchored to="intelligencedamage" offset="11,0" width="25" />
 				<target>intelligence</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="intelligencepermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,124" />
+				<target>intelligence</target>
+			</button_abilperms>
 			<number_charabilitybonus name="intelligencebonus" source="abilities.intelligence.bonus">
 				<anchored to="intelligence" offset="12,0" width="25" />
 				<target>intelligence</target>
@@ -155,7 +175,12 @@
 				<anchored to="wisdomdamage" offset="11,0" width="25" />
 				<target>wisdom</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="wisdompermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,156" />
+				<target>wisdom</target>
+			</button_abilperms>
 			<number_charabilitybonus name="wisdombonus" source="abilities.wisdom.bonus">
 				<anchored to="wisdom" offset="12,0" width="25" />
 				<target>wisdom</target>
@@ -186,7 +211,12 @@
 				<anchored to="charismadamage" offset="11,0" width="25" />
 				<target>charisma</target>
 				<script file="campaign/scripts/char_main_abilityperm.lua" />
+				<readonly />
 			</number_charabilitydamage>
+			<button_abilperms name="charismapermlist">
+				<anchored to="abilityframe" position="insidetopleft" offset="262,188" />
+				<target>charisma</target>
+			</button_abilperms>
 			<number_charabilitybonus name="charismabonus" source="abilities.charisma.bonus">
 				<anchored to="charisma" offset="12,0" width="25" />
 				<target>charisma</target>
@@ -216,4 +246,102 @@
 			</label_fieldtop>
 		</sheetdata>
 	</windowclass>
+
+	<!-- perms window with list -->
+	<windowclass name="charsheet_abilities_perms">
+		<frame>charsheethelper</frame>
+		<placement>
+			<size width="350" height="135" />
+		</placement>
+		<sizelimits>
+			<minimum width="350" height="200" />
+			<maximum width="500" height="650" />
+			<dynamic />
+		</sizelimits>
+		<nodelete />
+		<playercontrol />
+		<script file="campaign/scripts/abil_totalperms.lua" />
+		<sheetdata>
+			<windowtitlebar_char name="title">
+				<prefix>char_title_permabilchange</prefix>
+			</windowtitlebar_char>
+			<anchor_title_charsheethelper name="contentanchor" />
+		
+			<frame_char name="abilpermsframe">
+				<anchored position="insidetopleft" offset="15,40">
+					<right anchor="right" offset="-15" />
+					<bottom anchor="bottom" offset="-15" />
+				</anchored>
+			</frame_char>
+			<list_charabilities name="abilperms">
+				<anchored to="abilpermsframe">
+					<top offset="32" />
+					<left offset="15" />
+					<right offset="-20" />
+					<bottom offset="-15" />
+				</anchored>
+				<datasource>.abilperms</datasource>
+				<class>abilperm</class>
+			</list_charabilities>
+			<scrollbar>
+				<anchored to="abilperms" />
+				<target>abilperms</target>
+			</scrollbar>
+			<button_iedit name="abilperms_iedit">
+				<anchored to="abilperms" position="aboveright" offset="5,0" />
+				<target>abilperms</target>
+			</button_iedit>
+			<button_iadd name="abilperms_iadd">
+				<anchored to="abilperms" position="aboveleft" offset="5,0" />
+				<target>abilperms</target>
+			</button_iadd>
+		
+			<close_charsheethelper />
+			<resize_charsheethelper />
+		</sheetdata>
+	</windowclass>
+
+	<!-- List Item -->
+	<windowclass name="abilperm">
+		<margins control="0,0,0,2" />
+		<sheetdata>
+			<basicnumber name="permnum">
+				<bounds>5,5,20,20</bounds>
+				<hideonvalue value="0" />
+				<tabtarget next="name" />
+			</basicnumber>
+			<genericcontrol name="rightanchor">
+				<anchored height="0" width="0">
+					<top />
+					<right />
+				</anchored>
+			</genericcontrol>
+			<button_idelete name="idelete">
+				<anchored>
+					<top offset="5" />
+					<right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
+				</anchored>
+			</button_idelete>
+			<string_textlistitem name="name">
+				<anchored>
+					<top offset="5" />
+					<left parent="permnum" anchor="right" offset="10" />
+					<right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+			</string_textlistitem>
+		</sheetdata>
+	</windowclass>
+
+	<template name="button_abilperms">
+		<buttoncontrol>
+			<anchored width="20" height="20" />
+			<state icon="button_details" pressed="button_details_down" />
+			<script>
+				function onButtonPress()
+					Interface.openWindow('charsheet_abilities_perms', window.getDatabaseNode().getChild('abilities').getChild(target[1]))
+				end
+			</script>
+		</buttoncontrol>
+	</template>
 </root>
