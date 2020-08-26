@@ -8,6 +8,7 @@ function onInit()
 		DB.setValue(window.getDatabaseNode(), 'permbon', 'number', 1)
 	end
 end
+
 function onValueChanged()
 	local nScore = getValue() + DB.getValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.perm', 0)
 	DB.setValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.score', 'number', nScore)
