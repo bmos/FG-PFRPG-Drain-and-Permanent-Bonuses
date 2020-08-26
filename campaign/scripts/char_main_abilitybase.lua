@@ -3,9 +3,9 @@
 --
 
 function onInit()
-	if not DB.getValue(window.getDatabaseNode(), 'permbon') then
+	if not DB.getValue(window.getDatabaseNode(), target[1] .. 'permbon') then
 		setValue(DB.getValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.score', 0))
-		DB.setValue(window.getDatabaseNode(), 'permbon', 'number', 1)
+		DB.setValue(window.getDatabaseNode(), target[1] .. 'permbon', 'number', 1)
 	end
 end
 
