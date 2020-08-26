@@ -10,9 +10,6 @@
 		<ruleset>
 			<name>PFRPG</name>
 		</ruleset>
-		<ruleset>
-			<name>3.5E</name>
-		</ruleset>
 	</properties>
 
 	<announcement text="https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses\nDrain and Permanent Bonuses v1.0.0:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
