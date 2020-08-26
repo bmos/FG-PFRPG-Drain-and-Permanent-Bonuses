@@ -4,7 +4,7 @@ The situation regarding ability drain is very similar. It cannot be tracked in t
 
 Many people respond to this by using effects, but these use the rules for temporary bonuses (which impose penalties on most uses of the score for every two points of drain rather than changing the base score itself), which means that oddly-numbered base scores display improper behavior. The same is true of the ability drain if entered in the ability dmg fields, although it is further compounded by the nature of ability damage healing itself a little with each long rest (which is not the proper behavior for ability drain).
 
-Enter this extension.
+Enter this extension.<br>
 Now the Abilities section of the character sheet's main tab contains sub-menus for tracking permanent bonuses and ability drain with individual labels. It isn't able to pick the highest of typed abilities  yet, so you'll have to do that work yourself (for now).
 
 # Compatibility
