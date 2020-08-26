@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="3.3.11" release="3">
+	<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
+	<properties>
+		<loadorder>41</loadorder>
+		<name>Drain and Permanent Bonuses</name>
+		<version>1.0.0</version>
+		<author>bmos (Wil Thieme)</author>
+		<description>This extension</description>
+		<ruleset>
+			<name>PFRPG</name>
+		</ruleset>
+		<ruleset>
+			<name>3.5E</name>
+		</ruleset>
+	</properties>
+
+	<announcement text="https://github.com/bmos/FG-PFRPG-Item-Durability\nDrain and Permanent Bonuses v1.0.0:\nThis extension" font="emotefont" />
+
+	<base>
+		<!-- Campaign Records -->
+		<includefile source="campaign/record_char_main.xml" />
+		<!-- Strings -->
+		<includefile source="strings/strings_char_combat_drainandperm.xml" />
+	</base>
+</root>

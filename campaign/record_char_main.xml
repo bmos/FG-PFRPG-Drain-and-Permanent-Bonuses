@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="charsheet_main" merge="join">
+		<sheetdata>
+			<number_charabilityscore name="strength" source="abilities.strength.score">
+				<anchored to="abilityframe" position="insidetopleft" offset="127,26" width="25" />
+				<description textres="char_tooltip_str" />
+				<readonly />
+			</number_charabilityscore>
+			<string_charabilitylabel name="strength_label">
+				<anchored to="strength" offset="-8,0"/>
+				<static textres="strength" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="strengthbase" source="abilities.strength.base">
+				<anchored to="strength" position="left" offset="11,0" width="25" />
+				<target>strength</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="strengthdamage" source="abilities.strength.damage">
+				<anchored to="strength" offset="47,0" width="25" />
+				<target>strength</target>
+				<description textres="char_tooltip_strdamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="strengthperm" source="abilities.strength.perm">
+				<anchored to="strengthdamage" offset="11,0" width="25" />
+				<target>strength</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="strengthbonus" source="abilities.strength.bonus">
+				<anchored to="strength" offset="12,0" width="25" />
+				<target>strength</target>
+				<modifierfield>abilities.strength.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_strbonus" />
+			</number_charabilitybonus>
+
+			<number_charabilityscore name="dexterity" source="abilities.dexterity.score">
+				<anchored to="strength" width="25" />
+				<description textres="char_tooltip_dex" />
+			</number_charabilityscore>
+			<string_charabilitylabel name="dexterity_label">
+				<anchored to="dexterity" offset="-8,0"/>
+				<static textres="dexterity" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="dexteritybase" source="abilities.dexterity.base">
+				<anchored to="dexterity" position="left" offset="11,0" width="25" />
+				<target>dexterity</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="dexteritydamage" source="abilities.dexterity.damage">
+				<anchored to="dexterity" offset="47,0" width="25" />
+				<target>dexterity</target>
+				<description textres="char_tooltip_dexdamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="dexterityperm" source="abilities.dexterity.perm">
+				<anchored to="dexteritydamage" offset="11,0" width="25" />
+				<target>dexterity</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="dexteritybonus" source="abilities.dexterity.bonus">
+				<anchored to="dexterity" offset="12,0" width="25" />
+				<target>dexterity</target>
+				<modifierfield>abilities.dexterity.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_dexbonus" />
+			</number_charabilitybonus>
+
+			<number_charabilityscore name="constitution" source="abilities.constitution.score">
+				<anchored to="dexterity" width="25" />
+				<description textres="char_tooltip_con" />
+			</number_charabilityscore>
+			<string_charabilitylabel name="constitution_label">
+				<anchored to="constitution" offset="-8,0"/>
+				<static textres="constitution" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="constitutionbase" source="abilities.constitution.base">
+				<anchored to="constitution" position="left" offset="11,0" width="25" />
+				<target>constitution</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="constitutiondamage" source="abilities.constitution.damage">
+				<anchored to="constitution" offset="47,0" width="25" />
+				<target>constitution</target>
+				<description textres="char_tooltip_condamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="constitutionperm" source="abilities.constitution.perm">
+				<anchored to="constitutiondamage" offset="11,0" width="25" />
+				<target>constitution</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="constitutionbonus" source="abilities.constitution.bonus">
+				<anchored to="constitution" offset="12,0" width="25" />
+				<target>constitution</target>
+				<modifierfield>abilities.constitution.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_conbonus" />
+			</number_charabilitybonus>
+
+			<number_charabilityscore name="intelligence" source="abilities.intelligence.score">
+				<anchored to="constitution" width="25" />
+				<description textres="char_tooltip_int" />
+			</number_charabilityscore>
+			<string_charabilitylabel name="intelligence_label">
+				<anchored to="intelligence" offset="-8,0"/>
+				<static textres="intelligence" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="intelligencebase" source="abilities.intelligence.base">
+				<anchored to="intelligence" position="left" offset="11,0" width="25" />
+				<target>intelligence</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="intelligencedamage" source="abilities.intelligence.damage">
+				<anchored to="intelligence" offset="47,0" width="25" />
+				<target>intelligence</target>
+				<description textres="char_tooltip_intdamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="intelligenceperm" source="abilities.intelligence.perm">
+				<anchored to="intelligencedamage" offset="11,0" width="25" />
+				<target>intelligence</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="intelligencebonus" source="abilities.intelligence.bonus">
+				<anchored to="intelligence" offset="12,0" width="25" />
+				<target>intelligence</target>
+				<modifierfield>abilities.intelligence.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_intbonus" />
+			</number_charabilitybonus>
+
+			<number_charabilityscore name="wisdom" source="abilities.wisdom.score">
+				<anchored to="intelligence" width="25" />
+				<description textres="char_tooltip_wis" />
+			</number_charabilityscore>
+			<string_charabilitylabel name="wisdom_label">
+				<anchored to="wisdom" offset="-8,0"/>
+				<static textres="wisdom" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="wisdombase" source="abilities.wisdom.base">
+				<anchored to="wisdom" position="left" offset="11,0" width="25" />
+				<target>wisdom</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="wisdomdamage" source="abilities.wisdom.damage">
+				<anchored to="wisdom" offset="47,0" width="25" />
+				<target>wisdom</target>
+				<description textres="char_tooltip_wisdamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="wisdomperm" source="abilities.wisdom.perm">
+				<anchored to="wisdomdamage" offset="11,0" width="25" />
+				<target>wisdom</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="wisdombonus" source="abilities.wisdom.bonus">
+				<anchored to="wisdom" offset="12,0" width="25" />
+				<target>wisdom</target>
+				<modifierfield>abilities.wisdom.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_wisbonus" />
+			</number_charabilitybonus>
+
+			<number_charabilityscore name="charisma" source="abilities.charisma.score">
+				<anchored to="wisdom" width="25" />
+				<description textres="char_tooltip_cha" />
+			</number_charabilityscore>
+			<string_charabilitylabel name="charisma_label">
+				<anchored to="charisma" offset="-8,0"/>
+				<static textres="charisma" />
+			</string_charabilitylabel>
+			<number_charabilitydamage name="charismabase" source="abilities.charisma.base">
+				<anchored to="charisma" position="left" offset="11,0" width="25" />
+				<target>charisma</target>
+				<script file="campaign/scripts/char_main_abilitybase.lua" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="charismadamage" source="abilities.charisma.damage">
+				<anchored to="charisma" offset="47,0" width="25" />
+				<target>charisma</target>
+				<description textres="char_tooltip_chadamage" />
+			</number_charabilitydamage>
+			<number_charabilitydamage name="charismaperm" source="abilities.charisma.perm">
+				<anchored to="charismadamage" offset="11,0" width="25" />
+				<target>charisma</target>
+				<script file="campaign/scripts/char_main_abilityperm.lua" />
+			</number_charabilitydamage>
+			<number_charabilitybonus name="charismabonus" source="abilities.charisma.bonus">
+				<anchored to="charisma" offset="12,0" width="25" />
+				<target>charisma</target>
+				<modifierfield>abilities.charisma.bonusmodifier</modifierfield>
+				<description textres="char_tooltip_chabonus" />
+			</number_charabilitybonus>
+
+			<label_fieldtop name="abilitybase_label">
+				<anchored to="strengthbase" />
+				<static textres="char_label_abilitybase" />
+			</label_fieldtop>
+			<label_fieldtop name="abilityscore_label">
+				<anchored to="strength" />
+				<static textres="char_label_abilityscore" />
+			</label_fieldtop>
+			<label_fieldtop name="abilitybonus_label">
+				<anchored to="strengthbonus" />
+				<static textres="char_label_abilitybonus" />
+			</label_fieldtop>
+			<label_fieldtop name="abilitydamage_label">
+				<anchored to="strengthdamage" />
+				<static textres="char_label_abilitydamage" />
+			</label_fieldtop>
+			<label_fieldtop name="abilityperm_label">
+				<anchored to="strengthperm" />
+				<static textres="char_label_abilityperm" />
+			</label_fieldtop>
+		</sheetdata>
+	</windowclass>
+</root>
