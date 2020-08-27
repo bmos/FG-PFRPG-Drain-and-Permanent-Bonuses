@@ -8,9 +8,17 @@ function onInit()
 end
 
 local function addPerms(nodeAbil)
-	local nPermTotal = 0
+	local aBonuses = {}
 	for _,vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
-		nPermTotal = nPermTotal + DB.getValue(vNode, 'permnum', 0)
+		local nPerm = DB.getValue(vNode, 'permnum', 0)
+		local sType = DB.getValue(vNode, 'bonus_type', 0)
+		if aBonuses[sType] then aBonuses[sType] = math.max(aBonuses[sType], nPerm) end
+		if not aBonuses[sType] then aBonuses[sType] = nPerm end
+	end
+
+	local nPermTotal = 0
+	for _,nPerm in pairs(aBonuses) do
+		nPermTotal = nPermTotal + nPerm
 	end
 	
 	DB.setValue(nodeAbil, 'perm', 'number', nPermTotal)

@@ -251,11 +251,11 @@
 	<windowclass name="charsheet_abilities_perms">
 		<frame>charsheethelper</frame>
 		<placement>
-			<size width="350" height="135" />
+			<size width="350" height="200" />
 		</placement>
 		<sizelimits>
 			<minimum width="350" height="200" />
-			<maximum width="500" height="650" />
+			<maximum width="550" height="700" />
 			<dynamic />
 		</sizelimits>
 		<nodelete />
@@ -310,6 +310,9 @@
 				<hideonvalue value="0" />
 				<tabtarget next="name" />
 			</basicnumber>
+			<combobox_bonus_types name="bonus_type">
+				<anchored to="permnum" position="righthigh" offset="10,0" width="90"  height="20"/>
+			</combobox_bonus_types>
 			<genericcontrol name="rightanchor">
 				<anchored height="0" width="0">
 					<top />
@@ -325,7 +328,7 @@
 			<string_textlistitem name="name">
 				<anchored>
 					<top offset="5" />
-					<left parent="permnum" anchor="right" offset="10" />
+					<left parent="bonus_type" anchor="right" offset="5" />
 					<right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
 				</anchored>
 				<multilinespacing>20</multilinespacing>
@@ -343,5 +346,17 @@
 				end
 			</script>
 		</buttoncontrol>
+	</template>
+	<template name="combobox_bonus_types">
+		<combobox>
+			<listdirection>down</listdirection>
+			<script>
+				function onInit()
+					super.onInit();
+					addItems(DataCommon.bonustypes);
+				end
+			</script>
+		<listmaxsize>3</listmaxsize>
+		</combobox>
 	</template>
 </root>
