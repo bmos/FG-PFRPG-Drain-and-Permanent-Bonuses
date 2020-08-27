@@ -10,4 +10,4 @@ Now the Abilities section of the character sheet's main tab contains sub-menus f
 This extension has been tested with [FantasyGrounds Classic](https://www.fantasygrounds.com/home/FantasyGroundsClassic.php) 3.3.11 and [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.0 (2020-08-20).
 
 # Video Demonstration (click for video)
-[<img src="https://i.ytimg.com/vi_webp/Xn-n9BpcB6s/hqdefault.webp">](https://youtu.be/Xn-n9BpcB6s)
+[<img src="https://i.ytimg.com/vi_webp/TVdIZTwUvF8/hqdefault.webp">](https://youtu.be/TVdIZTwUvF8)
