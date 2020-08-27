@@ -12,8 +12,13 @@ local function addPerms(nodeAbil)
 	for _,vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
 		local nPerm = DB.getValue(vNode, 'permnum', 0)
 		local sType = DB.getValue(vNode, 'bonus_type', 0)
-		if aBonuses[sType] then aBonuses[sType] = math.max(aBonuses[sType], nPerm) end
-		if not aBonuses[sType] then aBonuses[sType] = nPerm end
+
+		if nPerm > 0 then
+			if aBonuses[sType] then aBonuses[sType] = math.max(aBonuses[sType], nPerm) end
+			if not aBonuses[sType] then aBonuses[sType] = nPerm end
+		else
+			table.insert(aBonuses, nPerm)
+		end
 	end
 
 	local nPermTotal = 0
