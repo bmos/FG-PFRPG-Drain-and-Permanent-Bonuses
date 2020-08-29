@@ -6,6 +6,10 @@ function onInit()
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.bonus_type', 'onUpdate', onPermUpdate)
 	DB.addHandler('charsheet.*.abilities.*.abilperms', 'onChildDeleted', onPermUpdate)
+
+	local sCharName = DB.getValue(getDatabaseNode().getChild('...'), 'name', '')
+	local sAbility = getDatabaseNode().getName()
+	title.setValue(StringManager.titleCase(sAbility) .. ' - ' .. sCharName)
 end
 
 local function addPerms(nodeAbil)
