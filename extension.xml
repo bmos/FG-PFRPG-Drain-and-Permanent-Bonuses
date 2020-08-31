@@ -17,6 +17,7 @@
 	<base>
 		<!-- Campaign Records -->
 		<includefile source="campaign/record_char_main.xml" />
+		<includefile source="campaign/record_charmini_main.xml" />
 		<!-- Strings -->
 		<includefile source="strings/strings_char_combat_drainandperm.xml" />
 	</base>

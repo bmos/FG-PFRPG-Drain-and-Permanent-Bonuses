@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Please see the license.html file included with this distribution for attribution and copyright information. -->
+
+<root>
+	<windowclass name="charsheetmini_main" merge="join" >
+		<minisheet />
+		<sheetdata>
+			<!-- Abilities -->
+			<number_charminiabilityscore name="strength" source="abilities.strength.score">
+				<readonly />
+			</number_charminiabilityscore>
+			<number_charminiabilityscore name="dexterity" source="abilities.dexterity.score">
+				<readonly />
+			</number_charminiabilityscore>
+			<number_charminiabilityscore name="constitution" source="abilities.constitution.score">
+				<readonly />
+			</number_charminiabilityscore>
+			<number_charminiabilityscore name="intelligence" source="abilities.intelligence.score">
+				<readonly />
+			</number_charminiabilityscore>
+			<number_charminiabilityscore name="wisdom" source="abilities.wisdom.score">
+				<readonly />
+			</number_charminiabilityscore>
+			<number_charminiabilityscore name="charisma" source="abilities.charisma.score">
+				<readonly />
+			</number_charminiabilityscore>
+						
+
+			<label_fieldtop name="ability_label">
+				<anchored to="strength" />
+				<static textres="char_label_abilityscore" />
+			</label_fieldtop>
+		</sheetdata>
+	</windowclass>
+</root>
