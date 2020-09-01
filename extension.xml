@@ -25,5 +25,6 @@
 		<includefile source="strings/strings_char_combat_drainandperm.xml" />
 		<!-- Scripts -->
 		<script name="EffectManagerDaPB" file="scripts/manager_effect_DaPB.lua" />
+		<script name="StackDaPB" file="scripts/stack_bonusesDaPB.lua" />
 	</base>
 </root>
