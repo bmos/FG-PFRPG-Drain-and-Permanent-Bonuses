@@ -4,10 +4,12 @@ One shortcoming of Fantasy Grounds' Pathfinder implementation is that  permanent
 Many people respond to this by using effects, but these use the rules for temporary bonuses (which impose penalties on most uses of the score for every two points of drain rather than changing the base score  itself), which means that oddly-numbered base scores display improper behavior. The same is true of the ability drain if entered in the ability dmg fields, although it is further compounded by the nature of ability damage healing itself a little with each long rest (which is not the proper behavior for ability drain).
 
 Enter this extension.<br>
-Now the Abilities section of the character sheet's main tab contains sub-menus for tracking permanent bonuses and ability drain with individual labels. Bonuses with the same type selected will not stack (the highest of each type of bonus will be used). This stacking behavior is also present for dodge and circumstance bonuses (which is incorrect and will be addressed soon). Bonus types for negative numbers are ignored.
+Now the Abilities section of the character sheet's main tab contains sub-menus for tracking permanent bonuses and ability drain with individual labels. Bonuses with the same type selected will not stack (the highest of each type of bonus will be used). Bonus types for negative numbers are ignored.
+
+NOTE: As with the FG stock implementation, permanent bonuses and temporary bonuses need to be manually vetted for stacking. This means that an effect with a +2 enhancement bonus to CON will also stack with +2 Perm bonus to CON unless you adjust the effect accordingly.
 
 # Compatibility
-This extension has been tested with [FantasyGrounds Classic](https://www.fantasygrounds.com/home/FantasyGroundsClassic.php) 3.3.11 and [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.0 (2020-08-20).
+This extension has been tested with [FantasyGrounds Classic](https://www.fantasygrounds.com/home/FantasyGroundsClassic.php) 3.3.11 and [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.0 (2020-08-26).
 
 # Video Demonstration (click for video)
 [<img src="https://i.ytimg.com/vi_webp/TVdIZTwUvF8/hqdefault.webp">](https://youtu.be/TVdIZTwUvF8)
