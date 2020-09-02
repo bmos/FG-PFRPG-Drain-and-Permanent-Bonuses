@@ -178,10 +178,5 @@ function getEffectsByType(rActor, sEffectType, sType, aFilter, rFilterActor, bTa
 		end  -- END ACTIVE CHECK
 	end  -- END EFFECT LOOP
 	
-	local nTempBonus = 0
-	for _,vBonus in pairs(aSubTotals) do
-		nTempBonus = vBonus
-	end
-	
-	return nTempBonus;
+	return results, aSubTotals;
 end

@@ -38,26 +38,18 @@ local function addPerms(nodeAbil)
 
 		if nPerm > 0 then
 			-- Don't stack bonuses of the same type
-			if aBonuses[sType] then
-				aBonuses[sType] = math.max(aBonuses[sType], nPerm)
-			else
-				aBonuses[sType] = nPerm
-			end
+			local aAbilEffects, aSubTotals = EffectManagerDaPB.getEffectsByType(rActor, sAbil, sType, aFilter, rFilterActor, bTargetedOnly)
+			
+			if aBonuses[sType] then aBonuses[sType] = math.max(aBonuses[sType], nPerm) end
+			if not aBonuses[sType] then aBonuses[sType] = nPerm end
 		else
 			-- Stack all penalties
 			table.insert(aBonuses, nPerm)
 		end
 	end
-	
+
 	local nPermTotal = 0
-	for sType,vPerm in pairs(aBonuses) do
-		local nTempBonus = EffectManagerDaPB.getEffectsByType(rActor, sAbil, sType, aFilter, rFilterActor, bTargetedOnly)
-		local nPerm = 0
-		if vPerm > nTempBonus then
-			nPerm = vPerm - nTempBonus
-		else
-			nPerm = vPerm
-		end
+	for _,nPerm in pairs(aBonuses) do
 		nPermTotal = nPermTotal + nPerm
 	end
 	
