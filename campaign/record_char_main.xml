@@ -353,6 +353,7 @@
 			<script>
 				function onInit()
 					super.onInit();
+					table.insert(DataCommon.bonustypes, 'inherent')
 					addItems(DataCommon.bonustypes);
 				end
 			</script>
