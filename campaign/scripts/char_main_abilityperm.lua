@@ -4,5 +4,5 @@
 
 function onValueChanged()
 	local nScore = getValue() + DB.getValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.base', 0)
-	DB.setValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.score', 'number', nScore)
+	DB.setValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.score', 'number', nScore)
 end
