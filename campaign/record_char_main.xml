@@ -9,12 +9,12 @@
 	<windowclass name="charsheet_main" merge="join">
 		<sheetdata>
 			<number_charabilityscore name="strength" source="abilities.strength.score">
-				<anchored to="abilityframe" position="insidetopleft" offset="91,26" width="25" />
+				<anchored to="abilityframe" position="insidetopleft" offset="96,26" width="25" />
 				<description textres="char_tooltip_str" />
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="strength_label">
-				<anchored to="strength" offset="-44,0"/>
+				<anchored to="strength" />
 				<static textres="strength" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="strengthbase" source="abilities.strength.base">
@@ -34,7 +34,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="strengthpermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,27" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,27" />
 				<target>strength</target>
 			</button_abilperms>
 			<number_charabilitybonus name="strengthbonus" source="abilities.strength.bonus">
@@ -50,7 +50,7 @@
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="dexterity_label">
-				<anchored to="dexterity" offset="-44,0"/>
+				<anchored to="dexterity" />
 				<static textres="dexterity" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="dexteritybase" source="abilities.dexterity.base">
@@ -70,7 +70,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="dexteritypermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,60" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,60" />
 				<target>dexterity</target>
 			</button_abilperms>
 			<number_charabilitybonus name="dexteritybonus" source="abilities.dexterity.bonus">
@@ -86,7 +86,7 @@
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="constitution_label">
-				<anchored to="constitution" offset="-44,0"/>
+				<anchored to="constitution" />
 				<static textres="constitution" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="constitutionbase" source="abilities.constitution.base">
@@ -106,7 +106,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="constitutionpermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,92" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,92" />
 				<target>constitution</target>
 			</button_abilperms>
 			<number_charabilitybonus name="constitutionbonus" source="abilities.constitution.bonus">
@@ -122,7 +122,7 @@
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="intelligence_label">
-				<anchored to="intelligence" offset="-44,0"/>
+				<anchored to="intelligence" />
 				<static textres="intelligence" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="intelligencebase" source="abilities.intelligence.base">
@@ -142,7 +142,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="intelligencepermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,124" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,124" />
 				<target>intelligence</target>
 			</button_abilperms>
 			<number_charabilitybonus name="intelligencebonus" source="abilities.intelligence.bonus">
@@ -158,7 +158,7 @@
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="wisdom_label">
-				<anchored to="wisdom" offset="-44,0"/>
+				<anchored to="wisdom" />
 				<static textres="wisdom" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="wisdombase" source="abilities.wisdom.base">
@@ -178,7 +178,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="wisdompermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,156" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,156" />
 				<target>wisdom</target>
 			</button_abilperms>
 			<number_charabilitybonus name="wisdombonus" source="abilities.wisdom.bonus">
@@ -194,7 +194,7 @@
 				<readonly />
 			</number_charabilityscore>
 			<string_charabilitylabel name="charisma_label">
-				<anchored to="charisma" offset="-44,0"/>
+				<anchored to="charisma" />
 				<static textres="charisma" />
 			</string_charabilitylabel>
 			<number_charabilitydamage name="charismabase" source="abilities.charisma.base">
@@ -214,7 +214,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="charismapermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="262,188" />
+				<anchored to="abilityframe" position="insidetopleft" offset="265,188" />
 				<target>charisma</target>
 			</button_abilperms>
 			<number_charabilitybonus name="charismabonus" source="abilities.charisma.bonus">
@@ -244,6 +244,10 @@
 				<anchored to="strengthperm" />
 				<static textres="char_label_abilityperm" />
 			</label_fieldtop>
+			
+			<number_charspeed name="speedfinal" source="speed.final">
+				<anchored offset="76,15" />
+			</number_charspeed>
 		</sheetdata>
 	</windowclass>
 
@@ -336,6 +340,12 @@
 		</sheetdata>
 	</windowclass>
 
+	<template name="string_charabilitylabel">
+		<label>
+			<anchored position="lefthigh" width="120" height="24" offset="-36,0" />
+			<static />
+		</label>
+	</template>
 	<template name="button_abilperms">
 		<buttoncontrol>
 			<anchored width="20" height="20" />
