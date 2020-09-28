@@ -3,15 +3,22 @@
 --
 
 function onInit()
-	if not DB.getValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.permbon') and not DB.getValue(window.getDatabaseNode(), target[1] .. 'permbon') then
-		setValue(DB.getValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.score', 0))
-		DB.setValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.permbon', 'number', 1)
-	elseif not DB.getValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.permbon') and DB.getValue(window.getDatabaseNode(), target[1] .. 'permbon') then
-		DB.setValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.permbon', 'number', 1)
+	local nodeChar = window.getDatabaseNode()
+	local nodeAbilities = nodeChar.getChild('abilities')
+	
+	if not DB.getValue(nodeAbilities, target[1] .. '.permbon') and not DB.getValue(nodeChar, target[1] .. 'permbon') then
+		setValue(DB.getValue(nodeAbilities, target[1] .. '.score', 0))
+		DB.setValue(nodeAbilities, target[1] .. '.permbon', 'number', 1)
+	elseif DB.getValue(nodeChar, target[1] .. 'permbon') then
+		DB.setValue(nodeAbilities, target[1] .. '.permbon', 'number', 1)
+		DB.deleteChild(nodeChar, target[1] .. 'permbon')
 	end
 end
 
 function onValueChanged()
-	local nScore = getValue() + DB.getValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.perm', 0)
-	DB.setValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.score', 'number', nScore)
+	local nodeAbilities = window.getDatabaseNode().getChild('abilities')
+
+	local nScore = getValue() + DB.getValue(nodeAbilities, target[1] .. '.perm', 0)
+	
+	DB.setValue(nodeAbilities, target[1] .. '.score', 'number', nScore)
 end
