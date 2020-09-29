@@ -19,7 +19,7 @@ local function addPerms(nodeAbil)
 		local sType = DB.getValue(vNode, 'bonus_type', 0)
 
 		if nPerm > 0 then
-			if sType == 'circumstance' or sType == 'dodge' then
+			if (sType == 'circumstance') or (sType == 'dodge') or (sType == 'untyped') then
 				if aBonuses[sType] then aBonuses[sType] = (aBonuses[sType] + nPerm) end
 				if not aBonuses[sType] then aBonuses[sType] = nPerm end
 			else

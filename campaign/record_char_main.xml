@@ -364,6 +364,7 @@
 				function onInit()
 					super.onInit();
 					table.insert(DataCommon.bonustypes, 'inherent')
+					table.insert(DataCommon.bonustypes, 'untyped')
 					addItems(DataCommon.bonustypes);
 				end
 			</script>
