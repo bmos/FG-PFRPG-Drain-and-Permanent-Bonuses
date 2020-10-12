@@ -2,7 +2,7 @@
 <root version="3.3.11" release="3">
 	<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
 	<properties>
-		<loadorder>65</loadorder>
+		<loadorder>29</loadorder>
 		<name>Drain and Permanent Bonuses</name>
 		<version>1.0.3</version>
 		<author>bmos (Wil Thieme)</author>
