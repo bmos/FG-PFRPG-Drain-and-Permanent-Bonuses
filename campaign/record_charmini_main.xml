@@ -25,8 +25,7 @@
 			<number_charminiabilityscore name="charisma" source="abilities.charisma.score">
 				<readonly />
 			</number_charminiabilityscore>
-						
-
+			
 			<label_fieldtop name="ability_label">
 				<anchored to="strength" />
 				<static textres="char_label_abilityscore" />
