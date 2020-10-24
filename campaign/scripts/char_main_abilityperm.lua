@@ -3,6 +3,8 @@
 --
 
 function onValueChanged()
-	local nScore = getValue() + DB.getValue(window.getDatabaseNode(), 'abilities.' .. target[1] .. '.base', 0)
-	DB.setValue(window.getDatabaseNode().getChild('abilities'), target[1] .. '.score', 'number', nScore)
+	local nodeAbilities = window.getDatabaseNode().getChild('abilities')
+	local nScore = DB.getValue(nodeAbilities, target[1] .. '.base', 0) + DB.getValue(nodeAbilities, target[1] .. '.perm', 0)
+
+	DB.setValue(nodeAbilities, target[1] .. '.score', 'number', nScore)
 end
