@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<!-- Please see the LCENSE.md file included with this distribution for attribution and copyright information. -->
+<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
 
 <root>
 	<windowclass name="charsheet_main" merge="join">
@@ -349,7 +349,6 @@
 			<state icon="button_details" pressed="button_details_down" />
 			<script>
 				function onButtonPress()
-					if super.onInit then super.onInit() end
 					Interface.openWindow('charsheet_abilities_perms', window.getDatabaseNode().getChild('abilities').getChild(target[1]))
 				end
 			</script>
