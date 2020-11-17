@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<root version="3.3" release="3">
-	<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
+
+<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
+
+<root version='3.3' release='3'>
 	<properties>
 		<loadorder>29</loadorder>
 		<name>Drain and Permanent Bonuses</name>
 		<version>1.2</version>
 		<author>bmos (Wil Thieme)</author>
 		<description>This extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e</description>
-		<ruleset>
-			<name>PFRPG</name>
-		</ruleset>
+		<ruleset name="PFRPG" />
 	</properties>
 
 	<announcement text="https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses\nDrain and Permanent Bonuses v1.2:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
