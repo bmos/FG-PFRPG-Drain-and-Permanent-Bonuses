@@ -9,8 +9,7 @@ Now the Abilities section of the character sheet's main tab contains sub-menus f
 NOTE: As with the FG stock implementation, permanent bonuses and temporary bonuses need to be manually vetted for stacking. This means that an effect with a +2 enhancement bonus to CON will also stack with +2 Perm bonus to CON unless you adjust the effect accordingly.
 
 # Compatibility
-This extension has been tested with [FantasyGrounds Classic](https://www.fantasygrounds.com/home/FantasyGroundsClassic.php) 3.3.12 and [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.3 (2020-11-25).
-In FG Classic, it is not compatible with my [Drain and Permanent Bonuses](https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses) extension (but it is in Unity).
+This extension has been tested with [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.10 (2021-02-04).
 
 # Video Demonstration (click for video)
 [<img src="https://i.ytimg.com/vi_webp/TVdIZTwUvF8/hqdefault.webp">](https://youtu.be/TVdIZTwUvF8)
