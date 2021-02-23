@@ -1,6 +1,6 @@
 All of the code written expressly for this extension was created by Wil Thieme (bmos).
 
-SmiteWorks owns rights to code sections copied from their rulesets. These code sections are used and modified by permission for FG community development.
+SmiteWorks owns rights to code sections copied from their rulesets. These code sections are used and modified by permission for FG community development and are not covered by the GNU General Public License.
 
 Drain and Permanent Bonuses is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. Drain and Permanent Bonuses is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](https://www.gnu.org/licenses/) for more details.
 
