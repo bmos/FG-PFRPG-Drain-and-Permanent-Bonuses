@@ -6,7 +6,7 @@ Many people respond to this by using effects, but these use the rules for tempor
 Enter this extension.<br>
 Now the Abilities section of the character sheet's main tab contains sub-menus for tracking permanent bonuses and ability drain with individual labels. Bonuses with the same type selected will not stack (the highest of each type of bonus will be used). Bonus types for negative numbers are ignored.
 
-NOTE: As with the FG stock implementation, permanent bonuses and temporary bonuses need to be manually vetted for stacking. This means that an effect with a +2 enhancement bonus to CON will also stack with +2 Perm bonus to CON unless you adjust the effect accordingly.
+*NOTE: As with the FG stock implementation, permanent bonuses and temporary bonuses need to be manually vetted for stacking. This means that an effect with a +2 enhancement bonus to CON will also stack with +2 Perm bonus to CON unless you adjust the effect accordingly.*
 
 # Compatibility
 This extension has been tested with [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.0.10 (2021-02-04).
