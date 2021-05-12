@@ -241,10 +241,6 @@
 				<anchored to="strengthperm" />
 				<static textres="char_label_abilityperm" />
 			</label_fieldtop>
-			
-			<number_charspeed name="speedfinal" source="speed.final">
-				<anchored offset="76,15" />
-			</number_charspeed>
 		</sheetdata>
 	</windowclass>
 
