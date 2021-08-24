@@ -44,3 +44,9 @@ function onInit()
 
 	onPermUpdate()
 end
+
+function onClose()
+	DB.removeHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
+	DB.removeHandler('charsheet.*.abilities.*.abilperms.*.bonus_type', 'onUpdate', onPermUpdate)
+	DB.removeHandler('charsheet.*.abilities.*.abilperms', 'onChildDeleted', onPermUpdate)
+end
