@@ -22,5 +22,7 @@
 		<!-- Campaign Records -->
 		<includefile source="campaign/record_char_main.xml" />
 		<includefile source="campaign/record_charmini_main.xml" />
+		<!-- Scripts -->
+		<script name="DrainAndPermanentBonuses" file="scripts/dapb.lua" />
 	</base>
 </root>
