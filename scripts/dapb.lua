@@ -36,9 +36,11 @@ local function handleRacialAbilities_new(nodeChar, sText)
 		if StringManager.contains(DataCommon.abilities, k) then
 			local nodeAbility = nodeChar.getChild("abilities." .. k)
 			local nodeAbilityPerm = nodeAbility.createChild("abilperms").createChild()
-			DB.setValue(nodeAbilityPerm, "name", "string", "Racial Ability Modifier");
+			DB.setValue(nodeAbilityPerm, "name", "string", "Racial Attribute Adjustments");
 			DB.setValue(nodeAbilityPerm, "bonus_type", "string", "racial");
 			DB.setValue(nodeAbilityPerm, "permnum", "number", v);
+			Interface.openWindow('charsheet_abilities_perms', nodeAbility)
+			Interface.toggleWindow('charsheet_abilities_perms', nodeAbility)
 			bApplied = true;
 		end
 	end
