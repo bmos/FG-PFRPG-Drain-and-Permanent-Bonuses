@@ -2,16 +2,6 @@
 --	Please see the LICENSE.md file included with this distribution for attribution and copyright information.
 --
 
-function onInit()
-	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
-	DB.addHandler('charsheet.*.abilities.*.abilperms.*.bonus_type', 'onUpdate', onPermUpdate)
-	DB.addHandler('charsheet.*.abilities.*.abilperms', 'onChildDeleted', onPermUpdate)
-
-	local sCharName = DB.getValue(getDatabaseNode().getChild('...'), 'name', '')
-	local sAbility = getDatabaseNode().getName()
-	title.setValue(StringManager.titleCase(sAbility) .. ' - ' .. sCharName)
-end
-
 local function addPerms(nodeAbil)
 	local aBonuses = {}
 	for _,vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
@@ -41,4 +31,14 @@ end
 
 function onPermUpdate()
 	if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end
+end
+
+function onInit()
+	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
+	DB.addHandler('charsheet.*.abilities.*.abilperms.*.bonus_type', 'onUpdate', onPermUpdate)
+	DB.addHandler('charsheet.*.abilities.*.abilperms', 'onChildDeleted', onPermUpdate)
+
+	local sCharName = DB.getValue(getDatabaseNode().getChild('...'), 'name', '')
+	local sAbility = getDatabaseNode().getName()
+	title.setValue(StringManager.titleCase(sAbility) .. ' - ' .. sCharName)
 end
