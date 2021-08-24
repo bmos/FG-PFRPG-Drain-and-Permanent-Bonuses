@@ -41,4 +41,6 @@ function onInit()
 	local sCharName = DB.getValue(getDatabaseNode().getChild('...'), 'name', '')
 	local sAbility = getDatabaseNode().getName()
 	title.setValue(StringManager.titleCase(sAbility) .. ' - ' .. sCharName)
+
+	onPermUpdate()
 end
