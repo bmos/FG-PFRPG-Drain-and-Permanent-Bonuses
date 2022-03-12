@@ -26,7 +26,5 @@ jobs:
         with:
           files: '.'
           config: https://raw.githubusercontent.com/bmos/FG-luacheck/main/fg.luacheckrc
-
-          # Emits annotations for source code at locations parsed from the output.
-          # Must be set to "none", "warning" or "error".
+          args: '--no-color'
           annotate: 'warning'
