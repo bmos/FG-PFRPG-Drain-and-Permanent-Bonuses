@@ -27,4 +27,4 @@ jobs:
           files: '.'
           config: https://raw.githubusercontent.com/bmos/FG-luacheck/main/fg.luacheckrc
           args: '--no-color'
-          annotate: 'error'
+          annotate: 'warning'
