@@ -9,7 +9,7 @@ on:
       - '**.lua'
   workflow_dispatch:
 
-name: Run Luacheck on Push or PR
+name: Run Luacheck
 
 jobs:
   build:
@@ -29,4 +29,4 @@ jobs:
 
           # Emits annotations for source code at locations parsed from the output.
           # Must be set to "none", "warning" or "error".
-          annotate: 'none'
+          annotate: 'warning'
