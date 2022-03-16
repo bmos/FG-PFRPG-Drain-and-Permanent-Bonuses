@@ -1,3 +1,5 @@
+[![Build FG-Usable File](https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses/actions/workflows/create-ext.yml/badge.svg)](https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses/actions/workflows/create-ext.yml) [![Luacheck](https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses/actions/workflows/luacheck.yml/badge.svg)](https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses/actions/workflows/luacheck.yml)
+
 # PFRPG Drain and Permanent Bonuses
 One shortcoming of Fantasy Grounds' Pathfinder implementation is that  permanent bonuses need to be tracked by modifying the ability score on  the character sheet's main tab. This is very risky, as it's easy to lose  track of everything that is included or even what the base score is (everyone makes mistakes after all and sometimes we have an item  equipped for months of real time). Mitigating this has often  necessitated some method of logging changes, often on the Notes tab. The situation regarding ability drain is very similar. It cannot be  tracked in the program without the same approach of changing the base  ability score, which is sub-optimal for the reasons stated above.
 
