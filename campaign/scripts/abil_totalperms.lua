@@ -1,10 +1,9 @@
 --
 --	Please see the LICENSE.md file included with this distribution for attribution and copyright information.
 --
-
 local function addPerms(nodeAbil)
 	local aBonuses = {}
-	for _,vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
+	for _, vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
 		local nPerm = DB.getValue(vNode, 'permnum', 0)
 		local sType = DB.getValue(vNode, 'bonus_type', 0)
 
@@ -22,16 +21,12 @@ local function addPerms(nodeAbil)
 	end
 
 	local nPermTotal = 0
-	for _,nPerm in pairs(aBonuses) do
-		nPermTotal = nPermTotal + nPerm
-	end
-	
+	for _, nPerm in pairs(aBonuses) do nPermTotal = nPermTotal + nPerm end
+
 	DB.setValue(nodeAbil, 'perm', 'number', nPermTotal)
 end
 
-function onPermUpdate()
-	if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end
-end
+function onPermUpdate() if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end end
 
 function onInit()
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
