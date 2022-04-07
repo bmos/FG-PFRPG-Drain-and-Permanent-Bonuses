@@ -26,7 +26,7 @@ local function addPerms(nodeAbil)
 	DB.setValue(nodeAbil, 'perm', 'number', nPermTotal)
 end
 
-function onPermUpdate() if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end end
+local function onPermUpdate() if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end end
 
 function onInit()
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
