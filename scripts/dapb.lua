@@ -1,7 +1,6 @@
 --
 --	Please see the LICENSE.md file included with this distribution for attribution and copyright information.
 --
-local handleRacialAbilities_old = nil
 local function handleRacialAbilities_new(nodeChar, sText)
 	local aWords = StringManager.parseWords(sText:lower());
 
@@ -54,8 +53,5 @@ local function handleRacialAbilities_new(nodeChar, sText)
 end
 
 function onInit()
-	handleRacialAbilities_old = CharManager.handleRacialAbilities
 	CharManager.handleRacialAbilities = handleRacialAbilities_new
 end
-
-function onClose() CharManager.handleRacialAbilities = handleRacialAbilities_old end
