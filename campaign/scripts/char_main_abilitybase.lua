@@ -1,6 +1,7 @@
 --
 -- Please see the LICENSE.md file included with this distribution for attribution and copyright information.
 --
+-- luacheck: globals setValue onValueChanged target
 function onInit()
 	local nodeChar = window.getDatabaseNode()
 	local nodeAbilities = nodeChar.getChild('abilities')
