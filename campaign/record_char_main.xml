@@ -31,7 +31,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="strengthpermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,27" />
+				<anchored to="strengthperm" />
 				<target>strength</target>
 			</button_abilperms>
 			<number_charabilitybonus name="strengthbonus" source="abilities.strength.bonus">
@@ -67,7 +67,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="dexteritypermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,60" />
+				<anchored to="dexterityperm" />
 				<target>dexterity</target>
 			</button_abilperms>
 			<number_charabilitybonus name="dexteritybonus" source="abilities.dexterity.bonus">
@@ -103,7 +103,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="constitutionpermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,92" />
+				<anchored to="constitutionperm" />
 				<target>constitution</target>
 			</button_abilperms>
 			<number_charabilitybonus name="constitutionbonus" source="abilities.constitution.bonus">
@@ -139,7 +139,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="intelligencepermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,124" />
+				<anchored to="intelligenceperm" />
 				<target>intelligence</target>
 			</button_abilperms>
 			<number_charabilitybonus name="intelligencebonus" source="abilities.intelligence.bonus">
@@ -175,7 +175,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="wisdompermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,156" />
+				<anchored to="wisdomperm" />
 				<target>wisdom</target>
 			</button_abilperms>
 			<number_charabilitybonus name="wisdombonus" source="abilities.wisdom.bonus">
@@ -211,7 +211,7 @@
 				<readonly />
 			</number_charabilitydamage>
 			<button_abilperms name="charismapermlist">
-				<anchored to="abilityframe" position="insidetopleft" offset="265,188" />
+				<anchored to="charismaperm" />
 				<target>charisma</target>
 			</button_abilperms>
 			<number_charabilitybonus name="charismabonus" source="abilities.charisma.bonus">
@@ -341,7 +341,7 @@
 	</template>
 	<template name="button_abilperms" merge="join">
 		<buttoncontrol>
-			<anchored width="20" height="20" />
+			<anchored position="right" width="20" height="20" />
 			<state icon="button_details" pressed="button_details_down" />
 			<script>
 				function onButtonPress()
