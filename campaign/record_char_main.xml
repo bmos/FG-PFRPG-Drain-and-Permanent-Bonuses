@@ -341,7 +341,7 @@
 	</template>
 	<template name="button_abilperms" merge="join">
 		<buttoncontrol>
-			<anchored position="right" width="20" height="20" />
+			<anchored position="righthigh" width="20" height="20" />
 			<state icon="button_details" pressed="button_details_down" />
 			<script>
 				function onButtonPress()
