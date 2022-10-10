@@ -21,12 +21,16 @@ local function addPerms(nodeAbil)
 	end
 
 	local nPermTotal = 0
-	for _, nPerm in pairs(aBonuses) do nPermTotal = nPermTotal + nPerm end
+	for _, nPerm in pairs(aBonuses) do
+		nPermTotal = nPermTotal + nPerm
+	end
 
 	DB.setValue(nodeAbil, 'perm', 'number', nPermTotal)
 end
 
-local function onPermUpdate() if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end end
+local function onPermUpdate()
+	if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end
+end
 
 function onInit()
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.permnum', 'onUpdate', onPermUpdate)
