@@ -333,13 +333,14 @@
 		</sheetdata>
 	</windowclass>
 
-	<template name="string_charabilitylabel" merge="join">
+	<template name="string_charabilitylabel">
 		<label>
 			<anchored position="lefthigh" width="120" height="24" offset="-36,0" />
 			<static />
 		</label>
 	</template>
-	<template name="button_abilperms" merge="join">
+
+	<template name="button_abilperms">
 		<buttoncontrol>
 			<anchored position="righthigh" width="20" height="20" />
 			<state icon="button_details" pressed="button_details_down" />
@@ -350,7 +351,8 @@
 			</script>
 		</buttoncontrol>
 	</template>
-	<template name="combobox_bonus_types" merge="join">
+
+	<template name="combobox_bonus_types">
 		<combobox>
 			<listdirection>down</listdirection>
 			<script>
