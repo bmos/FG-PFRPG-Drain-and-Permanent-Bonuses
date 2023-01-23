@@ -29,7 +29,7 @@ local function handleRacialAbilities_new(nodeChar, sText)
 	for k, v in pairs(aIncreases) do
 		if StringManager.contains(DataCommon.abilities, k) then
 			local nodeAbility = DB.getChild(nodeChar, 'abilities.' .. k)
-			local nodeAbilityPerm = DB.createChild(nodeAbility, 'abilperms').createChild()
+			local nodeAbilityPerm = DB.createChild(DB.createChild(nodeAbility, 'abilperms'))
 			DB.setValue(nodeAbilityPerm, 'name', 'string', 'Racial Attribute Adjustments')
 			DB.setValue(nodeAbilityPerm, 'bonus_type', 'string', 'racial')
 			DB.setValue(nodeAbilityPerm, 'permnum', 'number', v)
