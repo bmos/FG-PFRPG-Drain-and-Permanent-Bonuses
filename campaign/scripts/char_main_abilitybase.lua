@@ -4,7 +4,7 @@
 -- luacheck: globals setValue onValueChanged target
 function onInit()
 	local nodeChar = window.getDatabaseNode()
-	local nodeAbilities = nodeChar.getChild('abilities')
+	local nodeAbilities = DB.getChild(nodeChar, 'abilities')
 
 	if not DB.getValue(nodeAbilities, target[1] .. '.permbon') and not DB.getValue(nodeChar, target[1] .. 'permbon') then
 		setValue(DB.getValue(nodeAbilities, target[1] .. '.score', 0))

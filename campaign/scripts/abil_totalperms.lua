@@ -29,7 +29,7 @@ local function addPerms(nodeAbil)
 end
 
 local function onPermUpdate()
-	if getDatabaseNode().getParent().getName() == 'abilities' then addPerms(getDatabaseNode()) end
+	if DB.getName(DB.getParent(getDatabaseNode())) == 'abilities' then addPerms(getDatabaseNode()) end
 end
 
 function onInit()
@@ -37,8 +37,8 @@ function onInit()
 	DB.addHandler('charsheet.*.abilities.*.abilperms.*.bonus_type', 'onUpdate', onPermUpdate)
 	DB.addHandler('charsheet.*.abilities.*.abilperms', 'onChildDeleted', onPermUpdate)
 
-	local sCharName = DB.getValue(getDatabaseNode().getChild('...'), 'name', '')
-	local sAbility = getDatabaseNode().getName()
+	local sCharName = DB.getValue(DB.getChild(getDatabaseNode(), '...'), 'name', '')
+	local sAbility = DB.getName(getDatabaseNode())
 	title.setValue(StringManager.titleCase(sAbility) .. ' - ' .. sCharName)
 
 	onPermUpdate()
