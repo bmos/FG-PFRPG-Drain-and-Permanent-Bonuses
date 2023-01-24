@@ -3,7 +3,7 @@
 --
 local function addPerms(nodeAbil)
 	local aBonuses = {}
-	for _, vNode in pairs(DB.getChildren(nodeAbil, 'abilperms')) do
+	for _, vNode in ipairs(DB.getChildList(nodeAbil, 'abilperms')) do
 		local nPerm = DB.getValue(vNode, 'permnum', 0)
 		local sType = DB.getValue(vNode, 'bonus_type', 0)
 
