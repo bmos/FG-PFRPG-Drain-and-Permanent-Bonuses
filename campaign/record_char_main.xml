@@ -259,9 +259,9 @@
 		<playercontrol />
 		<script file="campaign/scripts/abil_totalperms.lua" />
 		<sheetdata>
-			<windowtitlebar_char name="title">
+			<windowtitlebar name="title">
 				<prefix>char_title_permabilchange</prefix>
-			</windowtitlebar_char>
+			</windowtitlebar>
 			<anchor_title_charsheethelper name="contentanchor" />
 		
 			<frame_char name="abilpermsframe">
