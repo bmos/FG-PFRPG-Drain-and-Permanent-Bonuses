@@ -260,7 +260,7 @@
 		<script file="campaign/scripts/abil_totalperms.lua" />
 		<sheetdata>
 			<windowtitlebar name="title">
-				<prefix>char_title_permabilchange</prefix>
+				<resource>char_title_permabilchange</resource>
 			</windowtitlebar>
 			<anchor_title_charsheethelper name="contentanchor" />
 		
