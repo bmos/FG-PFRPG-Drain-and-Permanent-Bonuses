@@ -346,7 +346,7 @@
 			<state icon="button_details" pressed="button_details_down" />
 			<script>
 				function onButtonPress()
-					Interface.openWindow('charsheet_abilities_perms', window.getDatabaseNode().getChild('abilities').getChild(target[1]))
+					Interface.openWindow('charsheet_abilities_perms', DB.getChild(window.getDatabaseNode(), 'abilities.' .. target[1]))
 				end
 			</script>
 		</buttoncontrol>
