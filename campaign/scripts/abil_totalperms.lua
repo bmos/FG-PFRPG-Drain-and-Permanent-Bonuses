@@ -29,7 +29,7 @@ local function addPerms(nodeAbil)
 end
 
 local function onPermUpdate()
-	if DB.getName(DB.getParent(getDatabaseNode())) == 'abilities' then addPerms(getDatabaseNode()) end
+	if DB.getName(getDatabaseNode(), '..') == 'abilities' then addPerms(getDatabaseNode()) end
 end
 
 function onInit()
