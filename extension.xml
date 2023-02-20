@@ -6,7 +6,7 @@
 	<properties>
 		<loadorder>29</loadorder>
 		<name>Feature: Drain and Permanent Bonuses</name>
-		<version>1.4</version>
+		<version>1.5</version>
 		<author>bmos (Wil Thieme)</author>
 		<description>This extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e</description>
 		<ruleset>
@@ -14,7 +14,7 @@
 		</ruleset>
 	</properties>
 
-	<announcement text="https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses\nDrain and Permanent Bonuses v1.4:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
+	<announcement text="https://github.com/bmos/FG-PFRPG-Drain-and-Permanent-Bonuses\nDrain and Permanent Bonuses v1.5:\nThis extension simplifies tracking permanent ability bonuses and abiltiy drain in PF1e" font="emotefont" />
 
 	<base>
 		<!-- Strings -->

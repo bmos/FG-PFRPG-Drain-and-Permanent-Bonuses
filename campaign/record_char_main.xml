@@ -259,9 +259,9 @@
 		<playercontrol />
 		<script file="campaign/scripts/abil_totalperms.lua" />
 		<sheetdata>
-			<windowtitlebar_char name="title">
-				<prefix>char_title_permabilchange</prefix>
-			</windowtitlebar_char>
+			<windowtitlebar name="title">
+				<resource>char_title_permabilchange</resource>
+			</windowtitlebar>
 			<anchor_title_charsheethelper name="contentanchor" />
 		
 			<frame_char name="abilpermsframe">
@@ -346,7 +346,7 @@
 			<state icon="button_details" pressed="button_details_down" />
 			<script>
 				function onButtonPress()
-					Interface.openWindow('charsheet_abilities_perms', window.getDatabaseNode().getChild('abilities').getChild(target[1]))
+					Interface.openWindow('charsheet_abilities_perms', DB.getChild(window.getDatabaseNode(), 'abilities.' .. target[1]))
 				end
 			</script>
 		</buttoncontrol>
