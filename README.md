@@ -11,7 +11,7 @@ Now the Abilities section of the character sheet's main tab contains sub-menus f
 *NOTE: As with the FG stock implementation, permanent bonuses and temporary bonuses need to be manually vetted for stacking. This means that an effect with a +2 enhancement bonus to CON will also stack with +2 Perm bonus to CON unless you adjust the effect accordingly.*
 
 # Compatibility
-This extension has been tested with [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.3.3 (2023-02-21).
+This extension has been tested with [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.3.3 (2023-02-23).
 
 # Video Demonstration (click for video)
 [<img src="https://i.ytimg.com/vi_webp/TVdIZTwUvF8/hqdefault.webp">](https://youtu.be/TVdIZTwUvF8)
